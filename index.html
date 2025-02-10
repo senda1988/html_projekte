@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aufgabe</h1>
+    <h2>1. Was sind Backups?</h2>
+    <p><b>Backups</b> sind einfach Kopien von Daten, die du machst, um deine wichtigen Informationen zu schützen. Wenn
+        etwas schief geht, zum Beispiel ein Fehler oder ein Computerabsturz, kannst du die Daten aus einem Backup
+        wiederherstellen.</p>
+    <h2>Warum sollte man Backups machen?</h2>
+    <ul>
+        <li><b><i>Schutz vor Datenverlust:</i></b> Wenn du deine wichtigen Dateien verlierst, z. B. durch einen
+            Computerfehler oder ein versehentliches Löschen, kannst du sie mit einem Backup einfach wiederherstellen.
+        </li>
+
+        <li><b><i>Einfacher bei Änderungen :</i></b> Wenn du deinen Computer oder dein Handy zurücksetzt oder eine neue
+            Software installierst, kannst du alle deine Daten aus dem Backup wiederherstellen.</li>
+        <li><b><i>Zeit sparen :</i></b>Backups machen es einfacher und schneller, verlorene Daten wieder zu bekommen.
+        </li>
+    </ul>
+    <h2>3. Was macht der Code?</h2>
+    <pre>
+        import shutil
+        import datetime
+
+        backup_source = "C:/Users/Benutzer/Dokumente"
+        backup_target = "D:/Backup_" + datetime.datetime.now().strftime("%Y%m%d%H%M")
+
+        shutil.copytree(backup_source, backup_target)
+        print(f"Backup erfolgreich: {backup_target}")
+    </pre>
+    <ol>
+        <li>Importiert die zwei Module:</li>
+        <ul>
+            <li>shutil (zum Kopieren von Dateien)</li>
+            <li>datetime (um die aktuelle Zeit zu bekommen)</li>
+        </ul>
+
+        <li>Ordner zum Sichern festlegen:</li>
+        <p>Der Quellordner ist der Ordner, den du sichern möchtest. In diesem Fall ist es C:/Users/Benutzer/Dokumente.
+        </p>
+
+        <li>Zielordner für das Backup erstellen:</li>
+        <p>Der Zielordner bekommt einen Namen, der mit Backup_ beginnt, gefolgt vom aktuellen Datum und der Uhrzeit,
+            damit der Ordner immer einen einzigartigen Namen hat. Zum Beispiel könnte der Ordner Backup_202502101200
+            heißen.</p>
+        <li>Daten kopieren:</li>
+        <p>Der Code kopiert den gesamten Inhalt des Dokumente-Ordners in den neuen Zielordner.</p>
+
+        <li> Erfolgsmeldung anzeigen:</li>
+        <p>Am Ende zeigt der Code an, dass das Backup erfolgreich war und sagt dir, wo die Dateien gespeichert wurden.
+        </p>
+    </ol>
+
+
+    <h3>4. Automatische Ausführung eines Scripts</h3>
+    <p>Um das Script automatisch auszuführen, kann man einen Task Scheduler nutzen:</p>
+    <ul>
+        <li>Unter Windows: </li>
+        <p>Windows hat eine eingebaute Funktion, die Programme automatisch startet: <b>Taskplaner</b> (Task
+            Scheduler) </p>
+
+        So geht’s:
+        <ol>
+            <li>Öffne die Aufgabenplanung (Drücke Win + R, tippe taskschd.msc, drücke Enter).</li>
+            <li>Neue Aufgabe erstellen (Klicke auf „Aufgabe erstellen...“).</li>
+            <li>Wähle die Uhrzeit:
+                <ul>
+                    <li> Reiter "Trigger" → "Neu..."</li>
+                    <li> Stelle ein: Jeden Tag um 02:00 Uhr starten.</li>
+                </ul>
+            <li>Wähle dein Skript:
+                <ul>
+                    <li>Reiter "Aktionen" → "Neu..."</li>
+                    <li> Wähle dein Python-Skript (backup.py).</li>
+                </ul>
+            </li>
+            </li>
+        </ol>
+
+        <li>Unter Linux/macOS: <b>cron jobs</b></li>
+    </ul>
+    <p>Ein Beispiel für einen cron-Job, der das Script täglich um 2 Uhr ausführt:</p>
+    <pre>
+0 2 * * * /usr/bin/python3 /path/to/backup.py
+    </pre>
+    <p>Dadurch wird das Script jeden Tag um 02:00 Uhr automatisch ausgeführt.</p>
+
+    <p>Weitere Informationen findest du auf <a href="https://de.wikipedia.org/wiki/Backup">Wikipedia</a>.</p>
+
+</body>
+
+</html>
