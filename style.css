@@ -1,0 +1,82 @@
+/* Allgemeine Seite Einstellungen */
+body {
+    font-family: Arial, sans-serif;
+    /* Moderne Schriftart */
+    background-color: #f4f7f6;
+    /* Heller Hintergrund für ein sauberes Aussehen */
+    color: #333;
+    /* Dunkle Textfarbe für gute Lesbarkeit */
+    margin: 5% 20%;
+    padding: 5% auto;
+    line-height: 1.6;
+}
+
+/* Kopfbereich (h1) */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    /* Angenehme grüne Farbe für die Hauptüberschrift */
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+/* Unterüberschrift (h2) */
+h2 {
+    color: #333;
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+
+/* Stil für Textabsätze */
+p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    padding: 0 10px;
+    text-align: justify;
+    /* Text wird auf beiden Seiten ausgerichtet */
+}
+
+/* Stil für die Liste (ul) */
+ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+/* Stil für Listenelemente (li) */
+li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Stil für <b> und <i> innerhalb von Listen */
+b,
+i {
+    color: #4CAF50;
+}
+
+/* Pre-Tag für den Code block */
+pre {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Stil für die nummerierte Liste (ol) */
+ol {
+    margin: 20px;
+    padding-left: 20px;
+}
+
+/* Verlinkungen für zusätzliche Interaktivität */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
