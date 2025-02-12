@@ -1,0 +1,121 @@
+/* Reset de base */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    display: flex;
+}
+
+.navAreaOne {
+    flex: 1;
+    background-color: #4B5945;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.navAreaTwo {
+    flex: 1;
+    background-color: #66785F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navAreaTwo p {
+    color: #1E201E;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.navAreaThree {
+    flex: 1;
+    background-color: #91AC8F;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Main */
+main {
+    background-color: #B2C9AD !important;
+    padding: 20px;
+}
+
+/* Section Shop */
+section {
+    display: flex;
+    margin: 50px 20px;
+}
+
+.shop {
+
+    background-color: #EAFAEA;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    border: 2px solid white;
+}
+
+.shop img {
+    height: 300px;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.shop p {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.section2 {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cont_section2 {
+
+    background-color: #EAFAEA;
+    height: 200px;
+    width: 100%;
+    border: 2px solid white;
+    margin: 50px 30px;
+}
+
+footer {
+    display: flex;
+    height: 100px;
+}
+
+.footer1 {
+    flex: 1;
+    background-color: #27667B;
+
+}
+
+.footer2 {
+    flex: 1;
+    background-color: #143D60;
+
+}
